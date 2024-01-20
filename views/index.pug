@@ -2,11 +2,13 @@ doctype html
 html 
     head 
         title= Messages
+        link(rel="stylesheet" href="../style.css")
     body
-        h2 Welcome to Messages App
+        h2(style={"text-align": "center"}) Welcome to Messages App
         each n in messageObj
-            - const divStyles = {"border": "1px solid black","width":"max-content", "margin": "auto", "margin-bottom": "10px", "padding": "5px"}
+            - const divStyles = {"border": "1px solid black","width":"500px", "margin": "auto", "margin-bottom": "10px", "padding": "10px", "border-left": "5px solid grey", "border-radius": "5px"}
             div(style=divStyles)
-                strong(color: red)= n.added
-                p= n.user
+                div(style={"display":"flex", "justify-content":"space-between", "align-items":"center"})
+                    strong= n.user
+                    strong(color: red)= n.added
                 p= n.text 

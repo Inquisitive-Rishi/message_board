@@ -11,7 +11,7 @@ const messages = [
       text: "Hello World!",
       user: "Charles",
       added: new Date().toGMTString()
-    }
+    },
 ];
 
 router.get('/', (req, res) => {
