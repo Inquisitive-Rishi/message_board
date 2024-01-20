@@ -1,0 +1,31 @@
+doctype html 
+html 
+    head 
+        title Form Page
+        style. 
+            body {
+                font-family: sans-serif;
+            }
+            input, textarea {
+                margin-bottom: 10px;
+                font-size: 1.2rem;
+                border: none;
+                background-color: #e9e8e8;
+                color: black;
+                border-radius: 5px;
+            }
+
+            input {
+                height: 2rem;
+            }
+    body(style={"height": "100vh", "display":"flex", "font-size":"2rem"})
+        div.form(style={"padding": "10px","margin":"auto","box-shadow":"0px 5px 10px rgba(0,0,0)"})
+            form(method="POST", action="/new")
+                label(for="name" name="name") name:
+                br
+                input(type="text" placeholder="your name")
+                br
+                label(for="name" name="name") message:
+                br
+                textarea( placeholder="this is a sample text..." rows="5" cols="30")
+                
