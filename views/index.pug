@@ -1,6 +1,12 @@
 doctype html 
 html 
     head 
-        title= title
-    body 
-        h2 Welcome to #{title}!
+        title= Messages
+    body
+        h2 Welcome to Messages App
+        each n in messageObj
+            - const divStyles = {"border": "1px solid black","width":"max-content", "margin": "auto", "margin-bottom": "10px", "padding": "5px"}
+            div(style=divStyles)
+                strong(color: red)= n.added
+                p= n.user
+                p= n.text 

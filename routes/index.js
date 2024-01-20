@@ -5,21 +5,17 @@ const messages = [
     {
       text: "Hi there!",
       user: "Amando",
-      added: new Date()
+      added: new Date().toGMTString()
     },
     {
       text: "Hello World!",
       user: "Charles",
-      added: new Date()
+      added: new Date().toGMTString()
     }
 ];
 
 router.get('/', (req, res) => {
-    res.render('index', { title: 'Message Home Page' })
-})
-
-router.get('/new', (req, res) => {
-    res.render('index', { title: 'Message New Page' })
+    res.render('index', { messageObj: messages })
 })
 
 module.exports = router;
