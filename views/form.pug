@@ -19,15 +19,15 @@ html
                 height: 2rem;
             }
     body(style={"height": "100vh", "display":"flex", "font-size":"2rem"})
-        div.form(style={"padding": "10px","margin":"auto","box-shadow":"0px 5px 10px rgba(0,0,0)"})
-            form(method="POST", action="/new")
+        div.form(style={"padding": "10px","margin":"auto","box-shadow":"0px 5px 10px rgba(0,0,0,0.4)"})
+            form(method="POST" action="/new")
                 label(for="name" name="name") name:
                 br
-                input(type="text" placeholder="your name")
+                input(type="text" placeholder="your name" name="authorName")
                 br
                 label(for="name" name="name") message:
                 br
-                textarea( placeholder="this is a sample text..." rows="5" cols="30")
+                textarea( placeholder="this is a sample text..." rows="5" cols="30" name="message")
                 br
-                button(style={"background-color":"#577de7", "padding":"10px","border":"0","color":"white","font-size":"1.2rem","font-weight":"600"}) submit
+                button(style={"background-color":"grey", "padding":"10px","border":"0","color":"white","font-size":"1.2rem","font-weight":"600"} type="submit") submit
                 

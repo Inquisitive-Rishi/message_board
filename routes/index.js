@@ -22,4 +22,14 @@ router.get('/new', (req, res) => {
     res.render('form')
 })
 
+router.post('/new', (req, res) => {
+  const data = { text: req.body.message, user: req.body.authorName, added: new Date().toGMTString() }
+  messages.push(data)
+  res.redirect('/')
+})
+
+router.post('/', (req, res) => {
+  res.redirect('/new')
+})
+
 module.exports = router;

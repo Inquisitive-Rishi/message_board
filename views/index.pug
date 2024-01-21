@@ -3,7 +3,10 @@ html
     head 
         title= Messages
         link(rel="stylesheet" href="../style.css")
-    body
+    body(style={"position": "relative"})
+        - const btnStyle = {"background-color":"grey", "font-weight":"600", "color":"white", "padding": "5px"}
+        form(method="POST" action="/")
+            button(style=btnStyle) Add Data
         h2(style={"text-align": "center"}) Welcome to Messages App
         each n in messageObj
             - const divStyles = {"border": "1px solid black","width":"500px", "margin": "auto", "margin-bottom": "10px", "padding": "10px", "border-left": "5px solid grey", "border-radius": "5px"}
